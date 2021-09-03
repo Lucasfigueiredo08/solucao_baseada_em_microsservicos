@@ -29,16 +29,18 @@ plugins {
 	id 'java'
 }
 
-group = 'com.dio'
+group = 'one.digitalinnovation.experts'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
 }
+
 ext {
 	set('springCloudVersion', "2020.0.3")
 }
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
@@ -46,7 +48,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
-	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+	//implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -55,6 +57,7 @@ dependencyManagement {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
+
 test {
 	useJUnitPlatform()
 }
